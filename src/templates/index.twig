@@ -1,0 +1,46 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Redactor CP plugin for Craft CMS 3.x
+ *
+ * Redactor CP index.twig
+ *
+ * @author    theAdhocracy
+ * @copyright Copyright (c) 2020 theAdhocracy
+ * @link      https://theadhocracy.co.uk
+ * @package   RedactorCp
+ * @since     1.0.0
+ */
+#}
+
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("theadhocracy\\redactorcp\\assetbundles\\redactorcp\\RedactorCpAsset") %}
+{% do view.registerAssetBundle("theadhocracy\\redactorcp\\assetbundles\\indexcpsection\\IndexCPSectionAsset") %}
+
+{# Link for the ? icon at the bottom of the page #}
+{% set docsUrl = "https://github.com/https://github.com/theAdhocracy/redactor-cp/blob/master/README.md" %}
+
+{# The title of this CP section #}
+{% set title = "Redactor CP" %}
+
+{# The URL to this plugin's base CP section #}
+{% set pluginCpUrl = url('redactor-cp') %}
+
+{# Get a URL to an image in our AssetBundle #}
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@theadhocracy/redactorcp/assetbundles/indexcpsection/dist', true) ~ '/img/Index-icon.svg' %}
+
+{# Content that should appear in the page header#}
+{% set extraPageHeaderHtml %}
+    <div class="buttons">
+        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('redactor-cp') }}</a>
+    </div>
+{% endset %}
+
+{# The content of the CP Section#}
+{% set content %}
+    <h2>{{ "Index CP Section body goes here"|t('redactor-cp') }}</h2>
+    <img src="{{ iconUrl }}" height="64" width="64" />
+    <p class="textline"></p>
+{% endset %}

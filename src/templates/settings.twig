@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Redactor CP plugin for Craft CMS 3.x
+ *
+ * Redactor CP Settings.twig
+ *
+ * @author    theAdhocracy
+ * @copyright Copyright (c) 2020 theAdhocracy
+ * @link      https://theadhocracy.co.uk
+ * @package   RedactorCp
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("theadhocracy\\redactorcp\\assetbundles\\redactorcp\\RedactorCpAsset") %}
+
+{{ forms.textField({
+    label: 'Some Field',
+    instructions: 'Enter some setting here.',
+    id: 'someAttribute',
+    name: 'someAttribute',
+    value: settings['someAttribute']})
+}}
