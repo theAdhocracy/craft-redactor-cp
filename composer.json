@@ -11,8 +11,8 @@
         "redactor cp"
     ],
     "support": {
-        "docs": "https://github.com/https://github.com/theAdhocracy/redactor-cp/blob/master/README.md",
-        "issues": "https://github.com/https://github.com/theAdhocracy/redactor-cp/issues"
+        "docs": "https://github.com/theAdhocracy/redactor-cp/blob/master/README.md",
+        "issues": "https://github.com/theAdhocracy/redactor-cp/issues"
     },
     "license": "MIT",
     "authors": [
@@ -34,7 +34,7 @@
         "handle": "redactor-cp",
         "hasCpSettings": true,
         "hasCpSection": true,
-        "changelogUrl": "https://raw.githubusercontent.com/https://github.com/theAdhocracy/redactor-cp/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/theAdhocracy/redactor-cp/master/CHANGELOG.md",
         "class": "theadhocracy\\redactorcp\\RedactorCp"
     }
 }
